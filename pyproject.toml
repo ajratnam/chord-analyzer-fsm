@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "piano toc"
+version = "0.1.0"
+description = ""
+authors = ["Ajay Ratnam <ajratnam.dev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pygame = "^2.5.2"
+pretty-midi = "^0.2.10"
+automathon = "^0.0.15"
+visual-automata = "^1.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
