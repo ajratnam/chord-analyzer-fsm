@@ -1,12 +1,9 @@
 import time
-
 import pretty_midi
-
 import ChordsFSM as chords
 
 
-def print_notes():
-    midi_data = pretty_midi.PrettyMIDI('song.mid')
+def print_notes(midi_data):
     ptime = 0
     for instrument in midi_data.instruments:
         for note in instrument.notes:
@@ -18,4 +15,6 @@ def print_notes():
             ptime = lapsed
 
 
-print_notes()
+if __name__ == '__main__':
+    midi_data = pretty_midi.PrettyMIDI('Tum Hi Ho.mid')
+    print_notes(midi_data)

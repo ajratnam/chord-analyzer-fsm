@@ -1,5 +1,6 @@
 import re
 import time
+
 from threading import Thread, Lock
 
 THRESHOLD = 0.3
@@ -69,7 +70,6 @@ class FSM:
         Thread(target=self.checker, daemon=True).start()
 
     def run_queue(self):
-        # print(sorted(self.exec_queue, key=sorter))
         for char in sorted(self.exec_queue, key=sorter):
             old_state = self.cur_state
             self.cur_state, self.prev_octave = self.cur_state.transition(char, self.prev_octave)

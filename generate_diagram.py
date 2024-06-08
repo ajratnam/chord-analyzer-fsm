@@ -56,4 +56,4 @@ dfa = DFA(
     final_states
 )
 
-dfa.view("chords-fsm3")
+dfa.view("chords-nfa")
